@@ -12,11 +12,12 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     browserSync = require('browser-sync'),
+    fontello = require('gulp-fontello'),
     del = require('del');
 
 // Define file paths    
 var jsSources = ['src/scripts/**/*.js'],
-	sassSources = ['src/styles/**/*.scss'],
+	sassSources = ['src/css/**/*.scss'],
 	imgSources = ['src/imgs/**/*'],
 	htmlSources = ['*.html'],
 	outputDir = 'dist/assets';
@@ -53,9 +54,21 @@ gulp.task('images', function() {
     .pipe(notify({ message: 'Images task complete' }));
 });
 
+gulp.task('glyph', function() {
+  return gulp.src('config.json')
+    .pipe(fontello({
+	    	host: 'http://fontello.com',
+				font: 'font',
+				css: 'css',
+				assetsOnly: true  	
+    }))
+    .pipe(gulp.dest(outputDir))
+    .pipe(notify({ message: 'Glyph task complete' }));
+});
+
 // Clean
 gulp.task('clean', function() {
-    return del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img']);
+    return del(['dist/assets/css', 'dist/assets/scripts', 'dist/assets/imgs']);
 });
 
 // Watch

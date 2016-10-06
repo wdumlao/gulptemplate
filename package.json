@@ -1,0 +1,31 @@
+{
+  "name": "newapp",
+  "version": "1.0.0",
+  "description": "New app setup from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('Hello World')"
+  },
+  "keywords": [
+    "walter"
+  ],
+  "author": "Walter Dumlao <me@walterdumlao.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-fontello": "^0.4.6",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jshint": "^2.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.1.0",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3"
+  }
+}
