@@ -1,2 +1,2 @@
-# gulptemplate
-Adding my gulp template
+# Gulp Template
+This is my base gulp template.
