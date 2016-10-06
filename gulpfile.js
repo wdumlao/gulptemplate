@@ -20,7 +20,7 @@ var jsSources = ['src/scripts/**/*.js'],
 	imgSources = ['src/imgs/**/*'],
 	htmlSources = ['*.html'],
 	outputDir = 'dist/assets';
-
+	
 // Scripts
 gulp.task('scripts', function() {
   return gulp.src(jsSources, { base: 'src' })
